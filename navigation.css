@@ -1,0 +1,53 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {margin: 0;}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* 
+  ================
+  Navigation
+  ================
+*/
+.navigation {
+  display: flex;
+}
+.navigation__drewmakes {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 
+  ================
+  Navigation Style
+  ================
+*/
+.navigation {
+  height: 2.8em;
+  align-items: center;
+  padding: 0 1em;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  color: rgba(117,117,117, 1);
+}
+.navigation li:hover {
+  color: rgb(51, 51, 51);
+}
+
+.navigation li:not(:last-child):not(.navigation__drewmakes) {
+  margin-right: 1em;
+}
+
+.navigation li i:not(.navigation__drewmakes--logo){
+  margin-right: .3em;
+}
+
+.navigation li i.navigation__drewmakes--search {
+  margin-left: .3em;
+}
