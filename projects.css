@@ -1,0 +1,90 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.projects__container {
+  width: calc(560px + 3em);
+
+}
+.projects__main {
+  font-size: 1.4em;
+  color: rgba(117,117,117, 1);
+  display: inline-block;
+  border: 1px solid rgb(226, 226, 226);
+  padding: 1em 1em 0 1em;
+  border-radius: 5px;
+  background: #F5FAFF;
+}
+
+.projects__grid div {
+  background: white;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: 405px 55px 80px;
+  grid-template-areas: 
+  "video video video";
+  grid-template-rows: 315px;
+  grid-gap: 10px;
+}
+.projects__video { grid-area: video; }
+
+.projects__video {
+  width: 560px;
+  height: 315px;
+  background: grey;
+}
+
+.projects__commit,
+.projects__repo-at-hist,
+.projects__time {
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  padding: .5em;
+}
+
+.projects__commit i {
+  padding-right: .3em;
+}
+.projects__time,
+.projects__repo-at-hist {
+  text-align: center;
+}
+
+.projects__commit svg {
+  fill: #c6cbd1;
+  margin-right: .2em
+}
+
+.projects__repo-at-hist svg {
+  fill: #0366d6;
+}
+
+.projects__open {
+  margin-top: .5em;
+  padding: 1em;
+  border: 1px solid  rgb(226, 226, 226);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.3em;
+  color: white;
+  background-color: #28a745;
+  background-image: linear-gradient(-180deg,#21ae42,#079b2a 90%);
+
+}
+
+.projects__more {
+  text-align: center;
+  padding-top: .2em;
+  padding-bottom: .5em;
+}
