@@ -26,7 +26,7 @@ ul {
 }
 
 .navigation {
-  height: 2.8em;
+  height: 3em;
   align-items: center;
   padding: 0 1em;
   border: 3px solid rgb(226, 226, 226);
@@ -34,30 +34,34 @@ ul {
   color: rgba(117,117,117, 1);
 }
 
+.navigation__drewmakes {
+  margin-right: .4em;
+}
+
+.navigation__search form {
+  display: inline;
+}
+
+.navigation__input {
+  padding: .5em;
+  border-radius: 30px;
+}
+input:not([type=submit]):not([type=file]) {
+  border: 2px solid rgba(117,117,117, 1);
+  font-size: .8em;
+  padding-left: .5em;
+}
+
+input:not([type=submit]):not([type=file]):hover {
+  border: 2px solid rgb(51, 51, 51);
+}
+
 .navigation__askme {
   margin-left: auto;
 }
 
-.navigation__input {
-  padding: .3em;
-  border-radius: 20px;
-}
-input:not([type=submit]):not([type=file]) {
-  border: 3px solid rgba(117,117,117, 1);
-  font-size: .8em;
-  padding-left: .6em;
-}
-
-input:not([type=submit]):not([type=file]):hover {
-  border: 3px solid rgb(51, 51, 51);
-}
-
 .navigation li:hover {
   color: rgb(51, 51, 51);
-}
-
-.navigation__drewmakes {
-  margin-right: .2em;
 }
 
 .navigation li:not(:last-child):not(.navigation__drewmakes) {
@@ -68,6 +72,6 @@ input:not([type=submit]):not([type=file]):hover {
   margin-right: .3em;
 }
 
-.navigation li i.navigation__drewmakes--isearch {
-  margin-left: .3em;
+.navigation li i.navigation__isearch {
+  margin-left: .2em;
 }
